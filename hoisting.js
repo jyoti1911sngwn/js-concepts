@@ -1,6 +1,6 @@
-var n = 2
-function fun (){
-    console.log("helo world")
+var x = 8
+function func(){
+    console.log("help world")
 }
-fun()
-console.log(n)
+func()
+console.log(x)
