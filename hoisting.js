@@ -1,7 +1,8 @@
-// func()
 // console.log(x)
+func()
 console.log(func)
+
 // var x = 8
-function func(){
+var func = ()=>{
     console.log("help world")
 }
