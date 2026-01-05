@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0    ">
+    <title>Sample Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="box"></div>
+    <button id="changeBtn">Change Color</button>
+
+    <script>
+        const box = document.getElementById("box");
+        const btn = document.getElementById("changeBtn");
+
+        const customevent = new CustomEvent('colorChange', {
+            detail: {color: "blue", text: "hey!!!!!!!!"}
+        })
+        box.addEventListener('colorChange' , (e)=>{
+            box.style.backgroundColor = e.detail.color
+            const p = document.createElement('p')
+            p.innerText = e.detail.text
+            box.appendChild(p)
+        })
+        btn.addEventListener('click', ()=>{
+            box.dispatchEvent(customevent)
+        })
+
+    </script>
+</body>
+
+</html>
