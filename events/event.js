@@ -1,0 +1,9 @@
+document.querySelector('#grand').addEventListener('click', ()=>{
+    console.log('grand click!!!')
+}, false);
+document.querySelector('#parent').addEventListener('click', ()=>{
+    console.log('parent click!!!')
+}, false);
+document.querySelector('#child').addEventListener('click', ()=>{
+    console.log('child click!!!')
+}, false)
